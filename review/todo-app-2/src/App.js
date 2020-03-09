@@ -37,6 +37,13 @@ const App = () => {
     [todos],
   );
 
+  const onRemove = useCallback(
+    id => {
+      setTodos(todos.filter(todo => todo.id !== id));
+    },
+    [todos],
+  );
+
   const onToggle = useCallback(
     id => {
       setTodos(
@@ -51,7 +58,7 @@ const App = () => {
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} onToggle={onToggle} />
+      <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} />
     </TodoTemplate>
   );
 };
