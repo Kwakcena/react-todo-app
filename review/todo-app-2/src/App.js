@@ -15,6 +15,11 @@ const App = () => {
       text: '자바스크립트 공부하기',
       checked: true,
     },
+    {
+      id: 3,
+      text: '운동하기',
+      checked: false,
+    },
   ]);
 
   return (
