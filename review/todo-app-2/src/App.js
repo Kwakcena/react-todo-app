@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import TodoTemplate from './components/TodoTemplate';
 import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
@@ -22,6 +22,21 @@ const App = () => {
     },
   ]);
 
+  const nextId = useRef(4);
+
+  const onInsert = useCallback(
+    text => {
+      const nextTodos = {
+        id: nextId.current,
+        text,
+        checked: false,
+      };
+      setTodos(todos.concat(nextTodos));
+      nextId.current += 1;
+    },
+    [todos],
+  );
+
   const onToggle = useCallback(
     id => {
       setTodos(
@@ -35,7 +50,7 @@ const App = () => {
 
   return (
     <TodoTemplate>
-      <TodoInsert />
+      <TodoInsert onInsert={onInsert} />
       <TodoList todos={todos} onToggle={onToggle} />
     </TodoTemplate>
   );
