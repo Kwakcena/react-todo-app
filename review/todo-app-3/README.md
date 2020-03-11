@@ -4,20 +4,20 @@
    1. ~~[x] `yarn add node-sass classnames react-icons`~~
    2. ~~[x] Prettier 설정~~
    3. ~~[x] index.css 수정. 프로젝트의 글로벌 스타일을 수정한다. 모두 지우고 배경색은 `#e9ecef`~~
-2. [] `TodoTemplate` 컴포넌트,scss 작성하기
+2. ~~[x] `TodoTemplate` 컴포넌트,scss 작성하기~~
    1. ~~[x] 화면 가운데 정렬~~
    2. ~~[x] 타이틀 보이기~~
    3. ~~[x] children으로 내부 JSX 렌더링~~
 3. ~~[x] `TodoInsert` 컴포넌트,scss 작성하기~~
-4. [] `TodoListItem` 컴포넌트,scss 작성하기
+4. ~~[x] `TodoListItem` 컴포넌트,scss 작성하기~~
    1. ~~[x] 컴포넌트 초안 작성~~
    2. ~~[x] scss 작성~~
    3. ~~[x] checked 값에 따른 조건부 UI 보이기.~~
-5. [] `TodoList` 컴포넌트,scss 작성하기
+5. ~~[x] `TodoList` 컴포넌트,scss 작성하기~~
    1. ~~[x] 컴포넌트 초안 작성~~
    2. ~~[x] scss 작성~~
    3. ~~[x] todos 객체 받아서 map으로 렌더링 하기.~~
-6. [] 기능 구현하기
+6. ~~[x] 기능 구현하기~~
    1. ~~[x] App에서 useState를 사용하여 todos라는 상태 정의~~
    2. ~~[x] 항목 추가 기능 구현하기.~~
       1. ~~[x] TodoInsert value 상태 관리하기~~
