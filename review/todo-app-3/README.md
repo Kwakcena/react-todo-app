@@ -27,6 +27,6 @@
    3. ~~[x] 지우기 기능 구현하기~~
       1. ~~[x] filter를 이용해 todos 배열에서 id로 항목 지우기.~~
       2. ~~[x] TodoListItem에서 삭제 함수 호출하기.~~
-   4. [] 수정 기능
-      1. [] onToggle 구현하기
-      2. [] TodoListItem에서 토글 함수 호출하기.
+   4. ~~[x] 수정 기능~~
+      1. ~~[x] onToggle 구현하기~~
+      2. ~~[x] TodoListItem에서 토글 함수 호출하기.~~
