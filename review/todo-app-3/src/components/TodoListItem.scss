@@ -19,8 +19,11 @@
     }
     &.checked {
       svg {
+        color: #22b8cf;
       }
       .text {
+        color: #adb5bd;
+        text-decoration: line-through;
       }
     }
   }

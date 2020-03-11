@@ -12,7 +12,7 @@
 4. [] `TodoListItem` 컴포넌트,scss 작성하기
    1. ~~[x] 컴포넌트 초안 작성~~
    2. ~~[x] scss 작성~~
-   3. [] checked 값에 따른 조건부 UI 보이기.
+   3. ~~[x] checked 값에 따른 조건부 UI 보이기.~~
 5. [] `TodoList` 컴포넌트,scss 작성하기
    1. ~~[x] 컴포넌트 초안 작성~~
    2. ~~[x] scss 작성~~
