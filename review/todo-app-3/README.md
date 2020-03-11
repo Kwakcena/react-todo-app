@@ -24,9 +24,9 @@
       2. ~~[x] todos 배열에 새 객체 추가하기~~
       3. ~~[x] useRef를 사용한 id 관리~~
       4. ~~[x] TodoInsert에서 onSubmit 이벤트 설정하기~~
-   3. [] 지우기 기능 구현하기
-      1. [] filter를 이용해 todos 배열에서 id로 항목 지우기.
-      2. [] TodoListItem에서 삭제 함수 호출하기.
+   3. ~~[x] 지우기 기능 구현하기~~
+      1. ~~[x] filter를 이용해 todos 배열에서 id로 항목 지우기.~~
+      2. ~~[x] TodoListItem에서 삭제 함수 호출하기.~~
    4. [] 수정 기능
       1. [] onToggle 구현하기
       2. [] TodoListItem에서 토글 함수 호출하기.
