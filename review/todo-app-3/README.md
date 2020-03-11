@@ -5,8 +5,8 @@
    2. ~~[x] Prettier 설정~~
    3. ~~[x] index.css 수정. 프로젝트의 글로벌 스타일을 수정한다. 모두 지우고 배경색은 `#e9ecef`~~
 2. [] `TodoTemplate` 컴포넌트,scss 작성하기
-   1. [] 화면 가운데 정렬
-   2. [] 타이틀 보이기
+   1. ~~[x] 화면 가운데 정렬~~
+   2. ~~[x] 타이틀 보이기~~
    3. ~~[x] children으로 내부 JSX 렌더링~~
 3. [] `TodoInsert` 컴포넌트,scss 작성하기
 4. [] `TodoListItem` 컴포넌트,scss 작성하기
