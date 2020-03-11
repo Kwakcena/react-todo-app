@@ -20,7 +20,7 @@
 6. [] 기능 구현하기
    1. ~~[x] App에서 useState를 사용하여 todos라는 상태 정의~~
    2. [] 항목 추가 기능 구현하기.
-      1. [] TodoInsert value 상태 관리하기
+      1. ~~[x] TodoInsert value 상태 관리하기~~
       2. [] todos 배열에 새 객체 추가하기
       3. [] useRef를 사용한 id 관리
       4. [] TodoInsert에서 onSubmit 이벤트 설정하기
