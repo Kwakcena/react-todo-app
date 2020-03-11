@@ -18,7 +18,7 @@
    2. ~~[x] scss 작성~~
    3. [] todos 객체 받아서 map으로 렌더링 하기.
 6. [] 기능 구현하기
-   1. [] App에서 useState를 사용하여 todos라는 상태 정의
+   1. ~~[x] App에서 useState를 사용하여 todos라는 상태 정의~~
    2. [] 항목 추가 기능 구현하기.
       1. [] TodoInsert value 상태 관리하기
       2. [] todos 배열에 새 객체 추가하기
