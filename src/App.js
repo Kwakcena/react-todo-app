@@ -1,7 +1,8 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useReducer, useRef, useCallback } from 'react';
 import TodoTemplate from './components/TodoTemplate';
 import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
+import { dispatch } from '../../../Library/Caches/typescript/3.8/node_modules/rxjs/internal/observable/pairs';
 
 function createBulkTodos() {
   const array = [];
@@ -15,10 +16,26 @@ function createBulkTodos() {
   return array;
 }
 
+function todoReducer(todos, action) {
+  switch (action.type) {
+    case 'INSERT':
+      return todos.concat(action.todo);
+    case 'REMOVE':
+      return todos.filter(todo => todo.id !== action.id);
+    case 'TOGGLE':
+      return todos.map(todo =>
+        todo.id === action.id ? { ...todo, checked: !todo.checked } : todo,
+      );
+    default:
+      return todos;
+  }
+}
+
 const App = () => {
-  // useState(createBulkTodos) -> 컴포넌트가 처음 렌더링될 때만 createBulkTodos 실행.
-  // useState(createBulkTodos()) -> 리렌더링 될 때마다 createBulkTodos 실행.
-  const [todos, setTodos] = useState(createBulkTodos);
+  // useReducer를 사용할 때는 원래 두 번째 파라미터에 초기 상태를 넣어 주어야 함.
+  // 현재는 undefined를 넣고 세 번째 파라미터에 초기 상태를 만들어 주는 함수를 넣음.
+  // 이렇게 하면 컴포넌트가 맨 처음 렌더링될 때만 createBulkTodos 함수가 호출됨.
+  const [todos, dispatch] = useReducer(todoReducer, undefined, createBulkTodos);
 
   //고윳값으로 사용될 id
   //ref를 사용하여 변수 담기
@@ -30,20 +47,16 @@ const App = () => {
       text,
       checked: false,
     };
-    setTodos(todos => todos.concat(todo));
+    dispatch({ type: 'INSERT', todo });
     nextId.current += 1;
   }, []);
 
   const onRemove = useCallback(id => {
-    setTodos(todos => todos.filter(todo => todo.id !== id));
+    dispatch({ type: 'REMOVE', id });
   }, []);
 
   const onToggle = useCallback(id => {
-    setTodos(todos =>
-      todos.map(todo =>
-        todo.id === id ? { ...todo, checked: !todo.checked } : todo,
-      ),
-    );
+    dispatch({ type: 'TOGGLE', id });
   }, []);
 
   return (
